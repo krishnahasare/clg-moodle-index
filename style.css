@@ -10,6 +10,7 @@ body {
     font-family: "Montserrat", serif;
     position: relative;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* Backdrop Blur Effect */
