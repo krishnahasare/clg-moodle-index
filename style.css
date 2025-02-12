@@ -10,7 +10,6 @@ body {
     font-family: "Montserrat", serif;
     position: relative;
     overflow-y: auto;
-    overflow-x: hidden;
 }
 
 /* Backdrop Blur Effect */
@@ -34,13 +33,21 @@ body::before {
     justify-content: center;
     width: 100%;
     height: auto;
+    max-width: 100vw;
+    overflow-x: auto;
 }
+
+/* CHANGES MADE HERE FOR DISPLAY*/
 
 .login-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px; /* Space between the cards and login box */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    
 }
 
 /* College Logo Styles */
@@ -50,6 +57,9 @@ body::before {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .clg-logo img {
