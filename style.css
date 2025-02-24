@@ -2,20 +2,18 @@
 /* Body Styles */
 body {
     background: url('./assets/dyp.jpg') no-repeat center center/cover;
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     margin: 0;
     font-family: "Montserrat", serif;
-    position: relative;
-    overflow-y: auto;
+    overflow: auto;
 }
 
 /* Backdrop Blur Effect */
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -26,45 +24,47 @@ body::before {
 
 /* Container Styles */
 .container {
-    min-height: 105vh;
+    min-height: 65vh;
     margin-top: 10px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-self: auto;
+   
     justify-content: center;
     width: 100%;
     height: auto;
-    max-width: 100vw;
-    overflow-x: auto;
+    overflow: auto;
 }
-
-/* CHANGES MADE HERE FOR DISPLAY*/
 
 .login-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px; /* Space between the cards and login box */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    
 }
+
+/* CHANGES MADE HERE */
+
+@media only screen and (max-width:950px){
+  .container > div  {
+        flex-direction:column;
+        width: 100%;
+    }
+} 
 
 /* College Logo Styles */
 .clg-logo {
-    position: absolute;
+    align-self: center;
     top: 40px; /* Adjust this value to move it down if needed */
     left: 50%;
-    transform: translateX(-50%);
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .clg-logo img {
+    margin-top: 20px;
     height: 120px;
     width: 400px;
+    align-self: center;
     filter: drop-shadow(3px 4px 10px rgba(0, 0, 0, 0.7)); /* Soft shadow effect */
 }
 
@@ -161,12 +161,9 @@ body::before {
     display: flex;
     justify-content: center;
     gap: 20px; /* Increased spacing between cards */
-    position: absolute;
     bottom: 30px;
     left: 50%;
     width: 100%;
-    transform: translateX(-50%);
-    /* background-color: rgba(0, 0, 0, 0.50); */
 }
 
 .social-card {
@@ -183,6 +180,7 @@ body::before {
     justify-content: center;
 
 }
+
 
 .social-card:hover {
     transform: translateY(-5px);
@@ -208,12 +206,13 @@ body::before {
 
 /* Marquee Styling */
 .marquee-container {
-    width: 70%;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    position: absolute;
-    margin-top: -400px; /* Space between logo and marquee */
+    position: relative;
+    margin-top: 45px; /* Space between logo and marquee */
 }
+
 
 .marquee-container marquee {
     font-size: 18px;
@@ -230,7 +229,7 @@ body::before {
     color: #3961c5; 
     text-decoration: none; 
     font-weight: bold;
-    padding: 10px;
+    padding: 8px;
     display: inline-block;
     width: 100%; /* Ensures the link covers the full marquee width */
 }
