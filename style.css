@@ -203,13 +203,6 @@ body::before {
     margin-top: 7px;
 }
 
-@media only screen and (max-width:950px){
-    .container > .social-media-container  {
-          flex-direction:column;
-          width: 100%;
-      }
-  }
-
 
 /* Marquee Styling */
 .marquee-container {
