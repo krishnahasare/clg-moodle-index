@@ -24,12 +24,11 @@ body::before {
 
 /* Container Styles */
 .container {
-    min-height: 65vh;
-    margin-top: 10px;
+    min-height: 50vh;
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
     align-self: auto;
-   
     justify-content: center;
     width: 100%;
     height: auto;
@@ -109,7 +108,7 @@ body::before {
 /* Forgot Password Link Styles */
 .login-box .forgot {
     display: block;
-    margin-top: 20px;
+    margin-top: 5px;
     color: #3961c5;
     text-decoration: none;
 }
@@ -171,8 +170,8 @@ body::before {
     padding: 15px; /* Increased padding */
     border-radius: 10px;
     text-align: center;
-    width: 100px; /* Increased width */
-    height: 100px; /* Increased height */
+    width: 90px; /* Increased width */
+    height: 90px; /* Increased height */
     box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
     display: flex;
     flex-direction: column;
@@ -231,6 +230,6 @@ body::before {
     font-weight: bold;
     padding: 8px;
     display: inline-block;
-    width: 100%; /* Ensures the link covers the full marquee width */
+    width: 80%; /* Ensures the link covers the full marquee width */
 }
 
